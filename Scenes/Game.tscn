@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bhytlmcyhr7lk"]
+
+[ext_resource type="Texture2D" uid="uid://5mxli5qf2o6p" path="res://Assets/00_PROJECT_SETUP/GemBg.png" id="1_iukft"]
+[ext_resource type="Script" uid="uid://5gbc1xhjr3fv" path="res://Scenes/Game.gd" id="1_j5yw3"]
+
+[node name="Game" type="Node2D" unique_id=257520261]
+script = ExtResource("1_j5yw3")
+
+[node name="GemBg" type="Sprite2D" parent="." unique_id=83713116]
+position = Vector2(581, 303)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_iukft")
+
+[node name="DiceTimer" type="Timer" parent="." unique_id=1673222399]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="DiceTimer" to="." method="_on_dice_timer_timeout"]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cnnq8824yg5bk"]
+
+[ext_resource type="Script" uid="uid://b5vkjlj52q7fi" path="res://Scenes/Dice.gd" id="1_jn3s8"]
+[ext_resource type="Texture2D" uid="uid://yd2b2hqqm4fw" path="res://Assets/00_PROJECT_SETUP/Dice.png" id="1_wpqjs"]
+[ext_resource type="Shape2D" uid="uid://dlcwm4t4l0c87" path="res://Resources/Dice.tres" id="2_dcpc8"]
+
+[node name="Dice" type="Area2D" unique_id=550681110 groups=["stoppable"]]
+script = ExtResource("1_jn3s8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=728519017]
+position = Vector2(0, 35)
+texture = ExtResource("1_wpqjs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1003783143]
+position = Vector2(0, 35)
+shape = ExtResource("2_dcpc8")
+debug_color = Color(0.03443298, 0.6207636, 0.55529964, 0.41960785)
